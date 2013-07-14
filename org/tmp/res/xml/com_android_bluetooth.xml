@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource-redirections>
+    <item name="drawable/bt_share">@mipmap/com_android_bluetooth_bt_share</item>
+    <item name="drawable/bt_incomming_file_notification">@drawable/com_android_bluetooth_bt_incomming_file_notification</item>
+    <item name="drawable/stat_notify_music">@drawable/com_android_music_stat_notify_musicplayer</item>
+    <item name="drawable/notify_panel_notification_icon_bg">@drawable/framework_notify_panel_notification_icon_bg</item>
+</resource-redirections>

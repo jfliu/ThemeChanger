@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource-redirections>
+    <item name="drawable/ic_menu_add">@drawable/com_android_browser_ic_new_window_holo_dark</item>
+    <item name="drawable/ic_menu_back">@drawable/com_android_browser_ic_back_holo_dark</item>
+    <item name="drawable/ic_menu_close_clear_cancel">@drawable/com_android_browser_ic_stop_holo_dark</item>
+    <item name="drawable/ic_menu_forward">@drawable/com_android_browser_ic_forward_holo_dark</item>
+</resource-redirections>

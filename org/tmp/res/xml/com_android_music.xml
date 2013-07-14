@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource-redirections>
+    <item name="drawable/app_music">@mipmap/com_android_music_app_music</item>
+    <item name="drawable/ic_tab_albums_selected">@drawable/ic_tab_albums_selected</item>
+    <item name="drawable/ic_tab_albums_unselected">@drawable/ic_tab_albums_unselected</item>
+    <item name="drawable/ic_tab_artists_selected">@drawable/ic_tab_artists_selected</item>
+    <item name="drawable/ic_tab_artists_unselected">@drawable/ic_tab_artists_unselected</item>
+    <item name="drawable/ic_tab_playback_selected">@drawable/ic_tab_playback_selected</item>
+    <item name="drawable/ic_tab_playback_unselected">@drawable/ic_tab_playback_unselected</item>
+    <item name="drawable/ic_tab_playlists_selected">@drawable/ic_tab_playlists_selected</item>
+    <item name="drawable/ic_tab_playlists_unselected">@drawable/ic_tab_playlists_unselected</item>
+    <item name="drawable/ic_tab_songs_selected">@drawable/ic_tab_songs_selected</item>
+    <item name="drawable/ic_tab_songs_unselected">@drawable/ic_tab_songs_unselected</item>
+    <item name="drawable/ic_mp_album_playback">@drawable/ic_mp_album_playback</item>
+    <item name="drawable/ic_mp_artist_playback">@drawable/ic_mp_artist_playback</item>
+    <item name="drawable/ic_mp_song_playback">@drawable/ic_mp_song_playback</item>
+    <item name="drawable/buttonbar_active">@drawable/framework_tab_selected</item>
+    <item name="drawable/buttonbar_focused">@drawable/framework_tab_focus</item>
+    <item name="drawable/buttonbar_inactive">@drawable/framework_tab_unselected</item>
+    <item name="drawable/buttonbar_pressed">@drawable/framework_tab_press</item>
+    <item name="drawable/playlist_tile_longpress">@drawable/com_android_music_playlist_tile_longpress</item>
+    <item name="drawable/playlist_tile_pressed">@drawable/com_android_music_playlist_tile_pressed</item>
+    <item name="drawable/playlist_tile_selected">@drawable/com_android_music_playlist_tile_selected</item>
+    <item name="drawable/ic_mp_shuffle_on_btn">@drawable/com_android_music_ic_mp_shuffle_on_btn</item>
+    <item name="drawable/ic_mp_partyshuffle_on_btn">@drawable/com_android_music_ic_mp_partyshuffle_on_btn</item>
+    <item name="drawable/ic_mp_repeat_all_btn">@drawable/com_android_music_ic_mp_repeat_all_btn</item>
+    <item name="drawable/ic_mp_repeat_once_btn">@drawable/com_android_music_ic_mp_repeat_once_btn</item>
+    <item name="drawable/indicator_ic_mp_playing_large">@drawable/com_android_music_indicator_ic_mp_playing_large</item>
+    <item name="drawable/indicator_ic_mp_playing_list">@drawable/com_android_music_indicator_ic_mp_playing_list</item>
+    <item name="drawable/stat_notify_musicplayer">@drawable/com_android_music_stat_notify_musicplayer</item>
+</resource-redirections>

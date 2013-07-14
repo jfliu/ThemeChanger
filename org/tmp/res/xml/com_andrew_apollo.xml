@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource-redirections>
+    <item name="drawable/ic_launcher">@mipmap/com_android_music_app_music</item>
+    <item name="drawable/stat_notify_musicplayer">@drawable/com_android_music_stat_notify_musicplayer</item>
+    <item name="drawable/stat_notify_music">@drawable/com_android_music_stat_notify_musicplayer</item>
+    <item name="drawable/notify_panel_notification_icon_bg">@drawable/framework_notify_panel_notification_icon_bg</item>
+</resource-redirections>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="preference_screen_header_padding_side">0.0dip</dimen>
+    <dimen name="alert_dialog_title_height">48.0dip</dimen>
+    <dimen name="alert_dialog_button_bar_height">39.0dip</dimen>
+    <dimen name="action_bar_title_text_size">19.0dip</dimen>
+    <dimen name="action_bar_subtitle_bottom_margin">4.0dip</dimen>
+    <dimen name="dropdownitem_text_padding_left">4.0dip</dimen>
+    <dimen name="dropdownitem_text_padding_right">4.0dip</dimen>
+    <dimen name="quick_settings_cell_gap">1.0dip</dimen>
+    <item type="dimen" name="status_bar_icon_drawing_alpha">100.0%</item>
+    <dimen name="close_handle_height">32.0dip</dimen>
+    <dimen name="close_handle_underlap">18.0dip</dimen>
+</resources>

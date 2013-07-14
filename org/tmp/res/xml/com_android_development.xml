@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource-redirections>
+    <item name="mipmap/ic_launcher_devtools">@mipmap/com_android_development_ic_launcher_devtools</item>
+</resource-redirections>

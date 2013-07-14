@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource-redirections>
+    <item name="drawable/file_manager_r">@mipmap/icon_myfiles</item>
+</resource-redirections>

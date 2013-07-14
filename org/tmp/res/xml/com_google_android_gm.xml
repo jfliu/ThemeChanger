@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource-redirections>
+    <item name="drawable/header_bg_gmail_widget_holo">@drawable/framework_ab_transparent_light_holo</item>
+    <item name="drawable/header_bg_widget_holo">@drawable/framework_ab_transparent_light_holo</item>
+    <item name="drawable/list_activated_holo">@drawable/framework_list_activated_holo</item>
+    <item name="drawable/list_focused_holo">@drawable/framework_list_focused_holo</item>
+    <item name="drawable/list_pressed_holo">@drawable/framework_list_pressed_holo_light</item>
+    <item name="drawable/list_selected_holo">@drawable/framework_list_selected_holo_light</item>
+</resource-redirections>

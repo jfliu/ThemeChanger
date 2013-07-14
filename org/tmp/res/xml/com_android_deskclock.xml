@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource-redirections>
+    <item name="mipmap/ic_launcher_alarmclock">@mipmap/com_android_deskclock_ic_launcher_alarmclock</item>
+    <item name="drawable/ic_discard_holo_dark">@drawable/com_android_camera_ic_menu_trash_holo_light</item>
+    <item name="drawable/ic_menu_add">@drawable/com_android_browser_ic_new_window_holo_dark</item>
+    <item name="drawable/ic_menu_done_holo_dark">@drawable/com_android_camera_ic_menu_done_holo_light</item>
+    <item name="drawable/holo_background">@drawable/framework_background_holo_dark</item>
+    <item name="drawable/notification_bg_normal">@drawable/framework_notification_bg_normal</item>
+    <item name="drawable/btn_alarm_focused">@drawable/com_android_deskclock_btn_alarm_focused</item>
+    <item name="drawable/btn_alarm_pressed">@drawable/com_android_deskclock_btn_alarm_pressed</item>
+    <item name="drawable/ic_delete_pressed">@drawable/com_android_deskclock_ic_delete_pressed</item>
+    <item name="drawable/ic_diamond_red">@drawable/com_android_deskclock_ic_diamond_red</item>
+    <item name="drawable/ic_label_pressed">@drawable/com_android_deskclock_ic_label_pressed</item>
+    <item name="drawable/ic_lap_pressed">@drawable/com_android_deskclock_ic_lap_pressed</item>
+    <item name="drawable/ic_plusone_pressed">@drawable/com_android_deskclock_ic_plusone_pressed</item>
+    <item name="drawable/ic_reset_pressed">@drawable/com_android_deskclock_ic_reset_pressed</item>
+    <item name="drawable/ic_share_pressed">@drawable/com_android_deskclock_ic_share_pressed</item>
+    <item name="drawable/clock_analog_second">@drawable/com_android_deskclock_clock_analog_second</item>
+    <item name="drawable/ic_tab_clock_normal">@drawable/com_android_deskclock_ic_tab_clock_normal</item>
+    <item name="drawable/ic_tab_clock_activated">@drawable/com_android_deskclock_ic_tab_clock_activated</item>
+    <item name="drawable/ic_tab_stopwatch_normal">@drawable/com_android_deskclock_ic_tab_stopwatch_normal</item>
+    <item name="drawable/ic_tab_stopwatch_activated">@drawable/com_android_deskclock_ic_tab_stopwatch_activated</item>
+    <item name="drawable/ic_tab_timer_normal">@drawable/com_android_deskclock_ic_tab_timer_normal</item>
+    <item name="drawable/ic_tab_timer_activated">@drawable/com_android_deskclock_ic_tab_timer_activated</item>
+    <item name="drawable/ic_alarm">@drawable/com_android_deskclock_ic_alarm</item>
+    <item name="drawable/ic_location">@drawable/com_android_deskclock_ic_location</item>
+    <item name="style/DeskClock">@style/DeskClock</item>
+    <item name="style/AlarmClockTheme">@style/AlarmClockTheme</item>
+    <item name="style/SettingsTheme">@style/SettingsTheme</item>
+    <item name="color/titlebar_separator">@color/titlebar_separator</item>
+    <item name="color/main_timer_clock">@color/main_timer_clock</item>
+    <item name="color/blackish">@color/transparent</item>
+    <item name="color/blackish_trans">@color/transparent</item>
+</resource-redirections>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource-redirections>
+    <item name="drawable/ic_menu_refresh">@drawable/com_android_browser_ic_refresh_holo_dark</item>
+    <item name="drawable/ic_tab_cancel">@drawable/com_android_browser_ic_stop_holo_dark</item>
+    <item name="drawable/ic_tab_download">@drawable/com_android_camera_ic_menu_ptp_holo_light</item>
+</resource-redirections>

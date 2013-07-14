@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource-redirections>
+    <item name="drawable/ic_launcher_browser">@mipmap/com_android_browser_ic_launcher_browser</item>
+</resource-redirections>
