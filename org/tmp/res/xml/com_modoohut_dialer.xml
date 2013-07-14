@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resource-redirections>
-    <item name="drawable/icon_contacts">@mipmap/com_android_contacts_ic_launcher_contacts</item>
-    <item name="drawable/icon">@mipmap/com_android_contacts_ic_launcher_phone</item>
-</resource-redirections>

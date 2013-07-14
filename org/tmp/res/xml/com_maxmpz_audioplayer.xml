@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resource-redirections>
-    <item name="drawable/app_icon">@mipmap/com_android_music_app_music</item>
-</resource-redirections>

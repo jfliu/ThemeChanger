@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resource-redirections>
-    <item name="drawable/ic_launcher">@mipmap/com_android_deskclock_ic_launcher_alarmclock</item>
-    <item name="drawable/calendar_preferences">@drawable/com_cyanogenmod_lock_clock_calendar_preferences</item>
-    <item name="drawable/clock_preferences">@drawable/com_cyanogenmod_lock_clock_clock_preferences</item>
-    <item name="drawable/weather_preferences">@drawable/com_cyanogenmod_lock_clock_weather_preferences</item>
-    <item name="drawable/ic_alarm_small">@drawable/com_cyanogenmod_lock_clock_ic_alarm_small</item>
-</resource-redirections>

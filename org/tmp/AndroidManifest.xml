@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest android:hasCode="false" android:versionCode="104" android:versionName="1.0.4" package="com.thomassafca.theme.htcsense"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pluto="http://www.w3.org/2001/pluto.html">
-    <application android:label="@string/theme_name_tw" android:icon="@drawable/icon" android:hasCode="false" name="Sense" />
-    <uses-feature android:name="com.tmobile.software.themes" />
-    <theme pluto:themeId="Sense" pluto:styleId="@style/Sense" pluto:name="@string/theme_name_tw" pluto:preview="@drawable/preview" pluto:author="@string/author" pluto:copyright="@string/copyright" pluto:wallpaperImage="@drawable/framework_default_wallpaper" pluto:styleName="@string/style_appearance_name">
-        <meta-data android:name="com.tmobile.theme.redirections" android:resource="@xml/redirections" />
-    </theme>
-</manifest>
