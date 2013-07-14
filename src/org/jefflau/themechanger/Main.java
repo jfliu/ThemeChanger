@@ -31,13 +31,15 @@ public class Main {
 	
 	public static final String DESTDIR="dest";
 	public static final String DESTTMPDIR="dest/tmp";
+	public static final String DESTDIRZIPS="dest/zips";
 	
 	public static final String PREFIXDRAW="drawable";
 	public static final String PREFIXMIPMAP="mipmap";
 	public static final String RES = "res";
+	public static final String DESTRES="destres";
 	
 	private static boolean apktool(String apkName){
-		boolean flag=false;
+		Log.d("=========================【反编译开始】=======================");
 		
 		File file=new File(ORGDIR+File.separator+apkName);
 		if(null==file||!file.isFile()||!apkName.endsWith(APKSUFFIX)){
@@ -47,7 +49,7 @@ public class Main {
 			Log.d("文件路径："+filePath);
 			file=new File(ORGTMPDIR);
 			if(null!=file&&!file.exists()){
-				flag=file.mkdirs();
+				file.mkdirs();
 				Log.d(ORGTMPDIR+" 目录创建成功！");
 			}
 			String command="tools/apktool.bat d -f "+ORGDIR+File.separator+apkName+" "+ORGTMPDIR;
@@ -62,6 +64,7 @@ public class Main {
 				proc.waitFor();
 				if(proc.exitValue()==0){
 					Log.d("反编译成功！ file="+apkName);
+					return true;
 				}
 				
 			} catch (IOException e) {
@@ -74,7 +77,10 @@ public class Main {
 		}
 		
 		
-		return true;
+		return false;
+	}
+	private static void delFile(String fileName){
+		delFile(new File(fileName));
 	}
 	private static void delFile(File file){
 		if(null==file||!file.exists())return;
@@ -98,9 +104,8 @@ public class Main {
 		//file.delete();
 	}
 	private static boolean cleanDestTempFile(){
-		File file=new File(DESTTMPDIR);
-		delFile(file);
-		
+		delFile(new File(DESTTMPDIR));
+		delFile(new File(DESTDIRZIPS));
 		return true;
 	}
 	
@@ -124,7 +129,7 @@ public class Main {
 				&&(drawName.startsWith(PREFIXDRAW)||drawName.startsWith(PREFIXMIPMAP))){
 				File destResDir=new File(DESTTMPDIR+
 						File.separator+pkgName+
-						File.separator+RES+
+						File.separator+DESTRES+
 						File.separator+draw.getName());
 				if(!destResDir.exists()){
 					destResDir.mkdirs();
@@ -201,7 +206,7 @@ public class Main {
 					str=str.substring(str.lastIndexOf("/")+1);
 					String destDrawable=DESTTMPDIR+
 						File.separator+pkgName+
-						File.separator+RES+
+						File.separator+DESTRES+
 						File.separator+resDir.getName()+
 						File.separator+str;
 					if(nightFlag){
@@ -282,6 +287,7 @@ public class Main {
 		}
 		//删除空的目录
 		cleanDestTempEmptyDir();
+		Log.d("========================图片拷贝转换完成==============");
 		return true;
 		
 	}
@@ -292,23 +298,123 @@ public class Main {
 			Log.d("key="+str+" value="+map.get(str));
 		}
 	}
+	private static boolean  aapt(boolean delDestRes){
+		File file=new File(DESTTMPDIR);
+		if(null==file||!file.isDirectory()){
+			return false;
+		}
+		File []list=file.listFiles();
+		if(null==list||list.length<=0){
+			return false;
+		}
+		for(File destPkg:list){
+			String command="tools/aapt.exe c -S "+DESTTMPDIR+File.separator+destPkg.getName()+File.separator+DESTRES
+					+" -C "+DESTTMPDIR+File.separator+destPkg.getName()+File.separator+RES;
+			try {
+				Process proc=Runtime.getRuntime().exec(command);
+				
+				BufferedReader in=new BufferedReader(new InputStreamReader(proc.getInputStream()));
+				String out=null;
+				while((out=in.readLine())!=null){
+					Log.d("----"+out);
+				}
+				proc.waitFor();
+				if(proc.exitValue()==0){
+					Log.d("png图片处理完成 file="+destPkg.getName());
+					
+					if(delDestRes){
+						delFile(new File(DESTTMPDIR+File.separator+destPkg.getName()+File.separator+DESTRES));
+					}
+				}
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		Log.d("=============png图片处理结束===========");
+		return true;
+	}
+	private static boolean zipFiles(String apkName,boolean zipOne,boolean delTmp){
+		File file=new File(DESTTMPDIR);
+		if(null==file||!file.isDirectory()){
+			return false;
+		}
+		apkName=apkName.substring(0,apkName.lastIndexOf("."));
+		apkName=DESTDIR+File.separator+apkName;
+		
+		File zips=new File(DESTDIRZIPS);
+		delFile(zips);
+		if(!zips.exists()){
+			zips.mkdirs();
+		}
+		for(File chr:file.listFiles()){
+			try {
+				ZipUtils.zip( chr,DESTDIRZIPS+File.separator+chr.getName());
+				Log.d("文件压缩完成 name="+chr.getName());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+		}
+		//压缩成大包
+		if(zipOne){
+			delFile(apkName);
+			try {
+				ZipUtils.zip(zips,apkName);
+				Log.d("=========================文件压缩结束"+apkName+"============");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		if(delTmp){
+			delFile(file);
+			delFile(zips);
+		}
+		return true;
+	}
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//apkName
-		String apkName="CM10.1_HTC_One_Sense_5.0_theme.apk";
-		boolean flag=apktool(apkName);
-		if(!flag){
-			Log.d("反编译失败【退出】");
-			return;
-		}
-		// 图片转换
-		changDrawable();
-		// appt 编译图片
 		
-		// 压缩所以文件
+		File file=new File(ORGDIR);
+		if(!file.exists()){
+			file.mkdirs();
+		}
+		String[]list=file.list();
+		if(null!=list&&list.length>=2){
+			for(String apkName:list){
+				if(apkName.endsWith(APKSUFFIX)){
+					Log.d("=====================【转换文件开始】【"+apkName+"】=====================");
+					boolean flag=apktool(apkName);
+					if(!flag){
+						Log.d("反编译失败【退出】");
+						return;
+					}
+					// 图片转换
+					changDrawable();
+					
+					// aapt 编译图片
+					aapt(true);
+					// 压缩各自文件文件
+					zipFiles(apkName,true,false);
+					Log.d("=====================【转换文件结束】【"+apkName+"】=====================");
+				};
+				
+			}
+		}
+		Log.d("=====================【程序结束】=====================");
+		
 		
 	}
 	
