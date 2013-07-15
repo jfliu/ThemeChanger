@@ -392,7 +392,7 @@ public class Main {
 			file.mkdirs();
 		}
 		String[]list=file.list();
-		if(null!=list&&list.length>=2){
+		if(null!=list&&list.length>=1){
 			for(String apkName:list){
 				if(apkName.endsWith(APKSUFFIX)){
 					Log.d("=====================【转换文件开始】【"+apkName+"】=====================");
